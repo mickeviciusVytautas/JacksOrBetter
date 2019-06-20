@@ -14,28 +14,32 @@ public class PokerGame {
 
     private static final int HAND_SIZE = 5;
 
-    public static final int ROYAL_FLUSH = 800;
-    public static final int STRAIGHT_FLUSH = 50;
-    public static final int FOUR_OF_A_KIND = 25;
-    public static final int FULL_HOUSE = 9;
-    public static final int FLUSH = 6;
-    public static final int STRAIGHT = 4;
-    public static final int THREE_OF_A_KIND = 3;
-    public static final int TWO_PAIR = 2;
-    public static final int JACKS_OR_BETTER = 1;
+    private final Map<Integer, String> prizes = new HashMap<Integer, String>(){
+        {
+            put(800, "Royal flush");
+            put(50, "Straight flush");
+            put(25, "Four of a kind");
+            put(9, "Full house");
+            put(6, "Flush");
+            put(4, "Three of a kind");
+            put(2, "Two pair");
+            put(1, "Jacks or better");
+        }
+    };
+    private static final int ROYAL_FLUSH = 800;
+    private static final int STRAIGHT_FLUSH = 50;
+    private static final int FOUR_OF_A_KIND = 25;
+    private static final int FULL_HOUSE = 9;
+    private static final int FLUSH = 6;
+    private static final int STRAIGHT = 4;
+    private static final int THREE_OF_A_KIND = 3;
+    private static final int TWO_PAIR = 2;
+    private static final int JACKS_OR_BETTER = 1;
 
     private final int ACE_NUMBER = Arrays.asList(PlayingCard.ranks).indexOf("Ace");
     private final int KING_NUMBER = Arrays.asList(PlayingCard.ranks).indexOf("King");
     private final int QUEEN_NUMBER = Arrays.asList(PlayingCard.ranks).indexOf("Queen");
     private final int JACK_NUMBER = Arrays.asList(PlayingCard.ranks).indexOf("Jack");
-
-    private final String WELCOME_MSG = "Welcome! If you wish to start the pokergame press ENTER.";
-    private final String CHOOSE_CARDS_TO_REPLACE_MSG = "\nEnter index of a card you wish to replace. Else - enter q.";
-    private final String INPUT_NOT_NUMBER_MSG = "That is not a number! Enter q if you want to stop.";
-    private final String INPUT_NUMBER_INCORRECT_MSG = "That is not a correct number!";
-    private final String INSUFFICIENT_FUNDS_MSG = "Insufficient funds";
-    private final String CONTINUE_MGS = "Want to play another game? y/n";
-    private final String LOST_GAME_MSG = "Sorry, but you lost all your money!";
 
     private List<PlayingCard> hand = new ArrayList<>();
 
@@ -45,8 +49,9 @@ public class PokerGame {
 
     private int betAmount = 1;
 
-    private int currentPrize;
-    private static Scanner scanner;
+    private int prizeMultiplicator;
+
+    private Scanner scanner;
 
     public PokerGame(){
         deck = new Deck();
@@ -63,7 +68,8 @@ public class PokerGame {
         betAmountPrompt();
         displayInitialHand();
         replacingCardsPrompt();
-        balance += calculatePayout();
+        calculatePrize();
+        balance += prizeMultiplicator * betAmount;
         displayFinalInfo();
     }
 
@@ -72,24 +78,27 @@ public class PokerGame {
         int betInput = 0;
         while(betInput == 0) {
             while (!scanner.hasNextInt()) {
-                System.out.println(INPUT_NOT_NUMBER_MSG);
+                scanner.next();
+                System.out.println("That is not a number!");
             }
             betInput = scanner.nextInt();
             if (betInput > balance) {
-                System.out.println(INSUFFICIENT_FUNDS_MSG);
+                System.out.println("Insufficient funds");
                 betInput = 0;
             }
         }
+        betAmount = betInput;
+        balance -= betAmount;
     }
 
     public boolean continueGame(){
         if(balance <= 0){
-            System.out.println(LOST_GAME_MSG);
+            System.out.println("Sorry, but you lost all your money!");
             return false;
         }
         boolean continueGame = false;
         String answer = "";
-        System.out.println(CONTINUE_MGS);
+        System.out.println("Want to play another game? y/n");
         do{
             String input = scanner.next();
             if(input.equalsIgnoreCase("y")) {
@@ -114,13 +123,13 @@ public class PokerGame {
                 if (answer.equalsIgnoreCase("q")) {
                     break;
                 }
-                System.out.println(INPUT_NOT_NUMBER_MSG);
+                System.out.println("That is not a number! Enter q if you want to stop.");
             }
             if (!answer.equalsIgnoreCase("q")) {
                 int cardId = scanner.nextInt();
                 PlayingCard playingCard = replaceCard(cardId);
                 if (playingCard == null) {
-                    System.out.println(INPUT_NUMBER_INCORRECT_MSG);
+                    System.out.println("That is not a correct number!");
                 } else {
                     System.out.println("\nYou removed " + playingCard.toString() + " from your hand.");
                     displayInitialHand();
@@ -133,35 +142,40 @@ public class PokerGame {
     }
 
 
-    private int calculatePayout(){
+    private void calculatePrize(){
 //        Hand contains a flush
         if(cardsOfSameSuit()){
 //            Hand also contains a straight
             if(isStraight()){
-                return betAmount * STRAIGHT_FLUSH;
+                prizeMultiplicator = STRAIGHT_FLUSH;
+                return;
             }
 //            RoyalFlush - Ace is at the end of straight
                 else if(isRoyalFlush()){
-                    return betAmount * ROYAL_FLUSH;
+                    prizeMultiplicator = ROYAL_FLUSH;
+                    return;
             }
-            return betAmount * FLUSH;
+            prizeMultiplicator = FLUSH;
+            return;
         }
-
 //        Hand contains any of pairs
         int winningsFromPairs = numberOfIdenticalRankCards();
         if(winningsFromPairs != 0){
-            return winningsFromPairs;
+            prizeMultiplicator = winningsFromPairs;
+            return;
         };
 //        Hand contains a straight
         if(isStraight()){
-            return betAmount * STRAIGHT;
+            prizeMultiplicator = STRAIGHT;
+            return;
         }
 //        Hand contains jack or a higher card
         if(hasRoyal()) {
-            return betAmount * JACKS_OR_BETTER;
+            prizeMultiplicator = JACKS_OR_BETTER;
+            return;
         }
 //        No winning
-        return -betAmount;
+        prizeMultiplicator = 0;
     }
 
     private boolean cardsOfSameSuit(){
@@ -247,19 +261,19 @@ public class PokerGame {
 
 //    Methods that are concerned with displaying information to user
     private void displayHand(){
-        System.out.println("Your hand: ");
         for (int i = 0; i < hand.size(); i++) {
             System.out.println(i + 1 + ". " + hand.get(i).toString());
         }
     }
 
     private void displayInitialHand(){
+        System.out.println("Your hand: ");
         displayHand();
-        System.out.println(CHOOSE_CARDS_TO_REPLACE_MSG);
+        System.out.println("\nEnter index of a card you wish to replace. Else - enter q.");
     }
 
     private void displayWelcome() {
-        System.out.println(WELCOME_MSG);
+        System.out.println( "Welcome! If you wish to start the poker game press ENTER.");
         try{
             System.in.read();
         } catch (IOException e) {
@@ -268,11 +282,15 @@ public class PokerGame {
     }
 
     private void displayFinalInfo() {
-        System.out.println("Your final hand is: ");
+        System.out.println("\n\nYour final hand is: ");
         displayHand();
-        System.out.println("___________________________________________");
-//        System.out.println("Your won: " + balance ".");
-
+        System.out.println("*********************************************************");
+        if(prizeMultiplicator != 0) {
+            System.out.println("Your prize: " + prizes.get(prizeMultiplicator) + "."
+                    + "\nPrize amount: " + prizeMultiplicator * betAmount + ".");
+        } else {
+            System.out.println("You lost: " +  betAmount + ".");
+        }
         System.out.println("Your balance: " + balance);
         System.out.println();
     }
