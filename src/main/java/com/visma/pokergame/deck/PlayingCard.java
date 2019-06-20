@@ -5,7 +5,7 @@ package com.visma.pokergame.deck;
  *
  * 2019-06-19
  *
- * Represents playing card in card poker game.
+ * Represents playing card in card game.
  *
  */
 public class PlayingCard {

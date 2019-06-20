@@ -8,7 +8,7 @@ import java.util.List;
  *
  * 2019-06-19
  *
- * Represents a deck of cards in poker pokergame.
+ * Represents a deck of cards in game.
  */
 public class Deck {
 
@@ -20,14 +20,18 @@ public class Deck {
         initializeNewDeck();
     }
 
-    public void dealCards(int numberOfCards, List<PlayingCard> hand){
-        if(playingCards.size() >= numberOfCards){
-            for (int i = 0; i < numberOfCards; i++){
-                PlayingCard playingCard = playingCards.remove((int) (Math.random() * playingCards.size()));
-                hand.add(playingCard);
-            }
+    public List<PlayingCard> dealCards(int numberOfCards){
+        List<PlayingCard> cardsToDeal = new ArrayList<>();
+        if(playingCards.size() >= numberOfCards) {
+            initializeNewDeck();
         }
+        for (int i = 0; i < numberOfCards; i++){
+            PlayingCard playingCard = playingCards.remove((int) (Math.random() * playingCards.size()));
+            cardsToDeal.add(playingCard);
+        }
+        return cardsToDeal;
     }
+
     private void initializeNewDeck() {
         playingCards.clear();
         for (int i = 0; i < PlayingCard.suits.length; i++) {
