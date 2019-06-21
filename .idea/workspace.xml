@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e3154ea0-f51a-4f8a-a9a9-9c1096a93a0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/PokerGame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/PokerGame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/PokerGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/PokerGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/deck/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/deck/Deck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/exceptions/DeckIsOutOfCardsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/utils/NumberOfSameRank.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/utils/Winnings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/visma/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/visma/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/visma/pokergame/compare/SuitComparator.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/deck/Deck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="102">
+              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#277#278#0" expanded="true" />
@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            <state relative-caret-position="221">
+              <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,12 +63,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="278" column="33" lean-forward="true" selection-start-line="278" selection-start-column="33" selection-end-line="278" selection-end-column="33" />
+            <state relative-caret-position="125">
+              <caret line="196" column="32" selection-start-line="196" selection-start-column="32" selection-end-line="196" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#9573#9574#0" expanded="true" />
-                <element signature="e#9643#9644#0" expanded="true" />
+                <element signature="e#9768#9769#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/visma/pokergame/PokerGameTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,8 +88,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/deck/PlayingCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="340">
+              <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+              <folding>
+                <element signature="e#583#584#0" expanded="true" />
+                <element signature="e#641#642#0" expanded="true" />
+                <element signature="e#673#674#0" expanded="true" />
+                <element signature="e#704#705#0" expanded="true" />
+                <element signature="e#749#750#0" expanded="true" />
+                <element signature="e#789#790#0" expanded="true" />
+                <element signature="e#821#822#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#897#898#0" expanded="true" />
+                <element signature="e#937#938#0" expanded="true" />
+                <element signature="e#982#983#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,8 +114,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -112,12 +137,16 @@
       <find>continue</find>
       <find>bet</find>
       <find>Welcome</find>
-      <find>balance +=</find>
       <find>hasNextInt</find>
       <find>that is</find>
       <find>hasNex</find>
       <find>your hand:</find>
       <find>String</find>
+      <find>prize amount</find>
+      <find>balance +=</find>
+      <find>3</find>
+      <find>calcul</find>
+      <find>Your hand</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,12 +167,12 @@
         <option value="$PROJECT_DIR$/src/com/visma/pokergame/PokerGame.java" />
         <option value="$PROJECT_DIR$/src/test/java/PokerGameTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visma/pokergame/exceptions/DeckIsOutOfCardsException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/visma/pokergame/deck/PlayingCard.java" />
         <option value="$PROJECT_DIR$/JacksOrBetter.iml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/visma/pokergame/PokerGameTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visma/pokergame/utils/Winnings.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visma/pokergame/deck/Deck.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visma/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/visma/pokergame/deck/PlayingCard.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/visma/pokergame/PokerGameTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java" />
       </list>
     </option>
@@ -210,6 +239,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="visma" type="462c0819:PsiDirectoryNode" />
               <item name="pokergame" type="462c0819:PsiDirectoryNode" />
+              <item name="compare" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JacksOrBetter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="visma" type="462c0819:PsiDirectoryNode" />
+              <item name="pokergame" type="462c0819:PsiDirectoryNode" />
               <item name="deck" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -224,6 +263,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -247,6 +290,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -284,11 +328,15 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.visma.Main" />
       <module name="JacksOrBetter" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.visma.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -308,7 +356,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PokerGameTest.shouldFindFlush" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PokerGameTest.shouldFindFullHouse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JacksOrBetter" />
       <extension name="coverage">
         <pattern>
@@ -318,22 +366,58 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.visma.pokergame" />
       <option name="MAIN_CLASS_NAME" value="com.visma.pokergame.PokerGameTest" />
-      <option name="METHOD_NAME" value="shouldFindFlush" />
+      <option name="METHOD_NAME" value="shouldFindFullHouse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PokerGameTest.shouldFindJacksOrBetter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JacksOrBetter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.visma.pokergame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.visma.pokergame" />
+      <option name="MAIN_CLASS_NAME" value="com.visma.pokergame.PokerGameTest" />
+      <option name="METHOD_NAME" value="shouldFindJacksOrBetter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PokerGameTest.shouldFindNoPrize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JacksOrBetter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.visma.pokergame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.visma.pokergame" />
+      <option name="MAIN_CLASS_NAME" value="com.visma.pokergame.PokerGameTest" />
+      <option name="METHOD_NAME" value="shouldFindNoPrize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.PokerGameTest.shouldFindFlush" />
+      <item itemvalue="JUnit.PokerGameTest.shouldFindFullHouse" />
+      <item itemvalue="JUnit.PokerGameTest.shouldFindJacksOrBetter" />
+      <item itemvalue="JUnit.PokerGameTest.shouldFindNoPrize" />
       <item itemvalue="JUnit.PokerGameTest" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PokerGameTest" />
-        <item itemvalue="JUnit.PokerGameTest.shouldFindFlush" />
+        <item itemvalue="JUnit.PokerGameTest.shouldFindNoPrize" />
+        <item itemvalue="JUnit.PokerGameTest.shouldFindJacksOrBetter" />
+        <item itemvalue="JUnit.PokerGameTest.shouldFindFullHouse" />
       </list>
     </recent_temporary>
   </component>
@@ -347,44 +431,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560966585962</updated>
-      <workItem from="1560966590687" duration="36161000" />
+      <workItem from="1560966590687" duration="41121000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PokerGameTest_shouldFindFlush - 2019.06.20 at 19h 44m 38s.xml">
-      <configuration name="PokerGameTest.shouldFindFlush" configurationId="JUnit" />
+    <history-entry file="PokerGameTest_shouldFindFourOfAKind - 2019.06.21 at 07h 37m 40s.xml">
+      <configuration name="PokerGameTest.shouldFindFourOfAKind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerGameTest_shouldFindFlush - 2019.06.20 at 19h 44m 41s.xml">
-      <configuration name="PokerGameTest.shouldFindFlush" configurationId="JUnit" />
+    <history-entry file="PokerGameTest_shouldFindFourOfAKind - 2019.06.21 at 07h 38m 49s.xml">
+      <configuration name="PokerGameTest.shouldFindFourOfAKind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerGameTest_shouldFindFlush - 2019.06.20 at 19h 44m 57s.xml">
-      <configuration name="PokerGameTest.shouldFindFlush" configurationId="JUnit" />
+    <history-entry file="PokerGameTest_shouldFindThreeOfAKind - 2019.06.21 at 07h 38m 55s.xml">
+      <configuration name="PokerGameTest.shouldFindThreeOfAKind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerGameTest_shouldFindFlush - 2019.06.20 at 19h 45m 06s.xml">
-      <configuration name="PokerGameTest.shouldFindFlush" configurationId="JUnit" />
+    <history-entry file="PokerGameTest_shouldFindTwoPair - 2019.06.21 at 07h 39m 18s.xml">
+      <configuration name="PokerGameTest.shouldFindTwoPair" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerGameTest_shouldFindFlush - 2019.06.20 at 19h 45m 42s.xml">
-      <configuration name="PokerGameTest.shouldFindFlush" configurationId="JUnit" />
+    <history-entry file="PokerGameTest_shouldFindFullHouse - 2019.06.21 at 07h 40m 58s.xml">
+      <configuration name="PokerGameTest.shouldFindFullHouse" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerGameTest - 2019.06.20 at 19h 48m 08s.xml">
+    <history-entry file="PokerGameTest_shouldFindJacksOrBetter - 2019.06.21 at 07h 41m 45s.xml">
+      <configuration name="PokerGameTest.shouldFindJacksOrBetter" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerGameTest_shouldFindJacksOrBetter - 2019.06.21 at 07h 41m 51s.xml">
+      <configuration name="PokerGameTest.shouldFindJacksOrBetter" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerGameTest_shouldFindNoPrize - 2019.06.21 at 07h 42m 30s.xml">
+      <configuration name="PokerGameTest.shouldFindNoPrize" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerGameTest - 2019.06.21 at 07h 43m 42s.xml">
       <configuration name="PokerGameTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerGameTest - 2019.06.20 at 19h 48m 11s.xml">
-      <configuration name="PokerGameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerGameTest - 2019.06.20 at 19h 48m 21s.xml">
-      <configuration name="PokerGameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerGameTest - 2019.06.20 at 19h 52m 22s.xml">
-      <configuration name="PokerGameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerGameTest - 2019.06.20 at 19h 52m 37s.xml">
+    <history-entry file="PokerGameTest - 2019.06.21 at 07h 46m 04s.xml">
       <configuration name="PokerGameTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36161000" />
+    <option name="totallyTimeSpent" value="41121000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -404,17 +488,17 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" weight="0.3285968" />
       <window_info anchor="bottom" id="Terminal" weight="0.3285968" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.50040483" side_tool="true" weight="0.6483126" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.053285968" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" visible="true" weight="0.053285968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,24 +548,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java</url>
-          <line>71</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java</url>
-          <line>289</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -501,18 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="492" column="9" selection-start-line="492" selection-start-column="9" selection-end-line="492" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/compare/SuitComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -545,16 +599,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1328">
-          <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/visma/pokergame/PokerGameTest.java">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/JacksOrBetter.iml">
       <provider selected="true" editor-type-id="text-editor">
@@ -591,10 +635,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/deck/PlayingCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding>
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/deck/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="102">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#277#278#0" expanded="true" />
@@ -605,31 +670,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/deck/PlayingCard.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/Throwable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="-1328">
+          <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state relative-caret-position="221">
+          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/visma/pokergame/PokerGameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="278" column="33" lean-forward="true" selection-start-line="278" selection-start-column="33" selection-end-line="278" selection-end-column="33" />
+        <state relative-caret-position="1">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9573#9574#0" expanded="true" />
-            <element signature="e#9643#9644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/compare/SuitComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="196" column="32" selection-start-line="196" selection-start-column="32" selection-end-line="196" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9768#9769#0" expanded="true" />
           </folding>
         </state>
       </provider>

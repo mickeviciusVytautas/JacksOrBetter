@@ -7,6 +7,7 @@ import com.visma.pokergame.deck.PlayingCard;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.groupingBy;
 
@@ -16,31 +17,33 @@ public class PokerGame {
 
     private final Map<Integer, String> prizes = new HashMap<Integer, String>(){
         {
-            put(800, "Royal flush");
-            put(50, "Straight flush");
-            put(25, "Four of a kind");
-            put(9, "Full house");
-            put(6, "Flush");
-            put(4, "Three of a kind");
-            put(2, "Two pair");
-            put(1, "Jacks or better");
+            put(ROYAL_FLUSH, "Royal flush");
+            put(STRAIGHT_FLUSH, "Straight flush");
+            put(FOUR_OF_A_KIND, "Four of a kind");
+            put(FULL_HOUSE, "Full house");
+            put(FLUSH, "Flush");
+            put(STRAIGHT, "Straight");
+            put(THREE_OF_A_KIND, "Three of a kind");
+            put(TWO_PAIR, "Two pair");
+            put(JACKS_OR_BETTER, "Jacks or better");
         }
     };
-    private static final int ROYAL_FLUSH = 800;
-    private static final int STRAIGHT_FLUSH = 50;
-    private static final int FOUR_OF_A_KIND = 25;
-    private static final int FULL_HOUSE = 9;
-    private static final int FLUSH = 6;
-    private static final int STRAIGHT = 4;
-    private static final int THREE_OF_A_KIND = 3;
-    private static final int TWO_PAIR = 2;
-    private static final int JACKS_OR_BETTER = 1;
 
     private final int ACE_NUMBER = Arrays.asList(PlayingCard.ranks).indexOf("Ace");
     private final int KING_NUMBER = Arrays.asList(PlayingCard.ranks).indexOf("King");
     private final int QUEEN_NUMBER = Arrays.asList(PlayingCard.ranks).indexOf("Queen");
     private final int JACK_NUMBER = Arrays.asList(PlayingCard.ranks).indexOf("Jack");
 
+    static final int ROYAL_FLUSH = 800;
+    static final int STRAIGHT_FLUSH = 50;
+    static final int FOUR_OF_A_KIND = 25;
+    static final int FULL_HOUSE = 9;
+    static final int FLUSH = 6;
+    static final int STRAIGHT = 4;
+    static final int THREE_OF_A_KIND = 3;
+    static final int TWO_PAIR = 2;
+    static final int JACKS_OR_BETTER = 1;
+    static final int NO_PRIZE = -1;
     private List<PlayingCard> hand = new ArrayList<>();
 
     private Deck deck;
@@ -49,12 +52,12 @@ public class PokerGame {
 
     private int betAmount = 1;
 
-    private int prizeMultiplicator;
+    private int prizeMultiplier;
 
     private Scanner scanner;
 
-    public PokerGame(){
-        deck = new Deck();
+    public PokerGame(Deck deck){
+        this.deck = deck;
         scanner = new Scanner(System.in);
     }
     public void initGame(){
@@ -63,14 +66,17 @@ public class PokerGame {
     }
 
     public void startRound(){
-        hand.clear();
-        hand.addAll(deck.dealCards(HAND_SIZE));
+        dealCards();
         betAmountPrompt();
-        displayInitialHand();
         replacingCardsPrompt();
         calculatePrize();
-        balance += prizeMultiplicator * betAmount;
+        balance += prizeMultiplier * betAmount;
         displayFinalInfo();
+    }
+
+    void dealCards(){
+        hand.clear();
+        hand.addAll(deck.dealCards(HAND_SIZE));
     }
 
     private void betAmountPrompt() {
@@ -88,7 +94,7 @@ public class PokerGame {
             }
         }
         betAmount = betInput;
-        balance -= betAmount;
+        displayInitialHand();
     }
 
     public boolean continueGame(){
@@ -114,8 +120,7 @@ public class PokerGame {
         return continueGame;
     }
 
-
-    public void replacingCardsPrompt() {
+    private void replacingCardsPrompt() {
         String answer = "";
         while (hand.size() != 0) {
             while (!scanner.hasNextInt()) {
@@ -132,7 +137,9 @@ public class PokerGame {
                     System.out.println("That is not a correct number!");
                 } else {
                     System.out.println("\nYou removed " + playingCard.toString() + " from your hand.");
-                    displayInitialHand();
+                    if(hand.size() != 0) {
+                        displayInitialHand();
+                    }
                 }
             } else {
                 break;
@@ -141,41 +148,33 @@ public class PokerGame {
         fillHand();
     }
 
-
-    private void calculatePrize(){
-//        Hand contains a flush
+//  Method that calculates a prize
+    void calculatePrize(){
         if(cardsOfSameSuit()){
-//            Hand also contains a straight
             if(isStraight()){
-                prizeMultiplicator = STRAIGHT_FLUSH;
+                prizeMultiplier = STRAIGHT_FLUSH;       //Case when FLUSH && STRAIGHT
+                return;
+            } else if(isRoyal()) {
+                prizeMultiplier = ROYAL_FLUSH;          //Case when FLUSH && STRAIGHT && ROYAL
                 return;
             }
-//            RoyalFlush - Ace is at the end of straight
-                else if(isRoyalFlush()){
-                    prizeMultiplicator = ROYAL_FLUSH;
-                    return;
-            }
-            prizeMultiplicator = FLUSH;
+            prizeMultiplier = FLUSH;                    //Case when only FLUSH
             return;
         }
-//        Hand contains any of pairs
-        int winningsFromPairs = numberOfIdenticalRankCards();
-        if(winningsFromPairs != 0){
-            prizeMultiplicator = winningsFromPairs;
+        int prizeFromPairs = containsPairOf();
+        if(prizeFromPairs != 0){
+            prizeMultiplier = prizeFromPairs;           //Case when TWO_PAIR or better pair
             return;
         };
-//        Hand contains a straight
-        if(isStraight()){
-            prizeMultiplicator = STRAIGHT;
+        if(isStraight() || isRoyal()){
+            prizeMultiplier = STRAIGHT;                 //Case when STRAIGHT || ROYAL (Ace is at the end)
             return;
         }
-//        Hand contains jack or a higher card
         if(hasRoyal()) {
-            prizeMultiplicator = JACKS_OR_BETTER;
+            prizeMultiplier = JACKS_OR_BETTER;          //Case when > Jack
             return;
         }
-//        No winning
-        prizeMultiplicator = 0;
+        prizeMultiplier = NO_PRIZE;
     }
 
     private boolean cardsOfSameSuit(){
@@ -207,7 +206,7 @@ public class PokerGame {
         return handContainsCardWithRankHigherThan(JACK_NUMBER) || handContainsCardWithRank(ACE_NUMBER);
     }
     //TODO refactor method
-    private boolean isRoyalFlush() {
+    private boolean isRoyal() {
         boolean hasAce = handContainsCardWithRank(ACE_NUMBER);
         boolean hasKing = handContainsCardWithRank(KING_NUMBER);
         boolean hasQueen = handContainsCardWithRank(QUEEN_NUMBER);
@@ -216,7 +215,7 @@ public class PokerGame {
         return hasAce && hasKing && hasQueen && hasJack && has10;
     }
 
-    private int numberOfIdenticalRankCards(){
+    private int containsPairOf(){
         Map<Integer, Long> map = hand.stream()
                 .collect(groupingBy(PlayingCard::getCardRank, Collectors.counting()));
         if(map.containsValue(4L)){
@@ -259,7 +258,7 @@ public class PokerGame {
         hand.addAll(deck.dealCards(cardsToDeal));
     }
 
-//    Methods that are concerned with displaying information to user
+//    Methods that display information to user
     private void displayHand(){
         for (int i = 0; i < hand.size(); i++) {
             System.out.println(i + 1 + ". " + hand.get(i).toString());
@@ -285,9 +284,9 @@ public class PokerGame {
         System.out.println("\n\nYour final hand is: ");
         displayHand();
         System.out.println("*********************************************************");
-        if(prizeMultiplicator != 0) {
-            System.out.println("Your prize: " + prizes.get(prizeMultiplicator) + "."
-                    + "\nPrize amount: " + prizeMultiplicator * betAmount + ".");
+        if(prizeMultiplier > 0) {
+            System.out.println("It is " + prizes.get(prizeMultiplier) + "!"
+                    + "\nYou won: " + prizeMultiplier * betAmount + ".");
         } else {
             System.out.println("You lost: " +  betAmount + ".");
         }
@@ -295,12 +294,8 @@ public class PokerGame {
         System.out.println();
     }
 
-    public Deck getDeck() {
-        return deck;
-    }
-
-    public void setDeck(Deck deck) {
-        this.deck = deck;
+    int getPrizeMultiplier() {
+        return prizeMultiplier;
     }
 
 }
