@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3154ea0-f51a-4f8a-a9a9-9c1096a93a0d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/PokerGame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/PokerGame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/PokerGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/PokerGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JacksOrBetter/com/visma/pokergame/compare/SuitComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/visma/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/visma/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/visma/pokergame/compare/SuitComparator.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="151">
@@ -72,6 +66,11 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -148,6 +147,7 @@
       <find>3</find>
       <find>calcul</find>
       <find>Your hand</find>
+      <find>another</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,10 +175,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/visma/pokergame/deck/PlayingCard.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/visma/pokergame/PokerGameTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visma/pokergame/PokerGame.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="width" value="981" />
     <option name="height" value="1032" />
@@ -200,74 +201,7 @@
             <path>
               <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="JacksOrBetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JacksOrBetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JacksOrBetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JacksOrBetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="visma" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JacksOrBetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="visma" type="462c0819:PsiDirectoryNode" />
-              <item name="pokergame" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JacksOrBetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="visma" type="462c0819:PsiDirectoryNode" />
-              <item name="pokergame" type="462c0819:PsiDirectoryNode" />
-              <item name="compare" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JacksOrBetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="visma" type="462c0819:PsiDirectoryNode" />
-              <item name="pokergame" type="462c0819:PsiDirectoryNode" />
-              <item name="deck" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JacksOrBetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JacksOrBetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JacksOrBetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -432,7 +366,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560966585962</updated>
-      <workItem from="1560966590687" duration="41368000" />
+      <workItem from="1560966590687" duration="41760000" />
     </task>
     <servers />
   </component>
@@ -469,7 +403,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41368000" />
+    <option name="totallyTimeSpent" value="41760000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -719,6 +653,12 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

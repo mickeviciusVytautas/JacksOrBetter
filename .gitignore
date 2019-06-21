@@ -30,7 +30,7 @@
 # .idea/modules
 
 # IntelliJ
-out/
+out/*
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -40,3 +40,4 @@ out/
 # modules.xml
 # .idea/misc.xml
 # *.ipr
+
